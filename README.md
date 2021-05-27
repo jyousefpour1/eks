@@ -1,1 +1,1 @@
-# eks
+# This module deploys EKS

@@ -43,10 +43,11 @@ resource "aws_eks_node_group" "jy" {
   node_group_name = "jy"
   node_role_arn   = aws_iam_role.jy-node.arn
   subnet_ids      = aws_subnet.jy[*].id
+  instance_types = "t3.small"
 
   scaling_config {
     desired_size = 1
-    max_size     = 1
+    max_size     = 3
     min_size     = 1
   }
 

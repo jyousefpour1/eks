@@ -1,7 +1,7 @@
-# This module deploys EKS on AWS using Terraform from: 
+# This module deploys EKS on AWS using Terraform: 
 https://github.com/hashicorp/terraform-provider-aws
 
-# Deploys a sample Guestbook on the eks cluster
+# Deploys sample Guestbook on the eks cluster
 
 
 To deploy the infrastructure: 

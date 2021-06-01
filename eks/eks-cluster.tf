@@ -51,16 +51,6 @@ resource "aws_security_group" "jy-cluster" {
   }
 }
 
-resource "aws_security_group_rule" "jy-cluster-ingress-workstation-https" {
-  cidr_blocks       = [local.workstation-external-cidr]
-  description       = "Allow workstation to communicate with the cluster API Server"
-  from_port         = 443
-  protocol          = "tcp"
-  security_group_id = aws_security_group.jy-cluster.id
-  to_port           = 443
-  type              = "ingress"
-}
-
 resource "aws_eks_cluster" "jy" {
   name     = var.cluster-name
   role_arn = aws_iam_role.jy-cluster.arn
